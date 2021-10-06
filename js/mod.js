@@ -1,14 +1,14 @@
 let modInfo = {
 	name: "War Tree",
 	id: "wartree",
-	author: "nobody",
-	pointsName: "points",
+	author: "RTXT25",
+	pointsName: "War Points",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	offlineLimit: 999999,  // In hours
 }
 
 // Set your version in num and name
