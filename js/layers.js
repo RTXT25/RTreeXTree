@@ -32,9 +32,9 @@ addLayer("", {
     },
 })
 
-addLayer("click", {
-    name: "clickers",
-    symbol:"C",
+addLayer("S", {
+    name: "spys",
+    symbol:"S",
     position:"1",
     startData() { return {                  // startData is a function that returns default data for a layer. 
         unlocked: false,                     // You can add more variables here to add them to your layer.
@@ -42,16 +42,15 @@ addLayer("click", {
     }},
 
     color: "#eb8c34",                       // The color for this layer, which affects many elements.
-    resource: "Clicky Upgarde Points",            // The name of this layer's main prestige resource.
-    row: 0,                                 // The row this layer is on (0 is the first row).
+    resource: "Intel",            // The name of this layer's main prestige resource.
+    row: 1,                                 // The row this layer is on (0 is the first row).
 
-    baseResource: "War Points",                 // The name of the resource your prestige gain is based on.
+    baseResource: "Equipment Points",                 // The name of the resource your prestige gain is based on.
     baseAmount() { return player.points },  // A function to return the current amount of baseResource.
-
-    requires: new Decimal(10),              // The amount of the base needed to  gain 1 of the prestige currency.
+    requires() { return new Decimal(15).times((player.S.unlockOrder&&!player.S.unlocked)?5000:1) },              // The amount of the base needed to  gain 1 of the prestige currency.
                                             // Also the amount required to unlock the layer.
 
-    type: "normal",                         // Determines the formula used for calculating prestige currency.
+    type: "static",                         // Determines the formula used for calculating prestige currency.
     exponent: 0.5,                          // "normal" prestige gain is (currency^exponent).
 
     gainMult() {                            // Returns your multiplier to your gain of the prestige resource.
@@ -62,12 +61,20 @@ addLayer("click", {
     },
 
     layerShown() { return true },          // Returns a bool for if this layer's node should be visible in the tree.
-    buyables: {
 
-        },
     upgrades: {
-       
+       11 :{
+           title : "Handheld Radio",
+           description : "double your I gain",
+       },
         // Look in the upgrades docs to see what goes here!
+    },
+    buyables: {
+        11: {
+            title : "Another Spy",
+            description: "By another spy to gather I faster"
+            
+        }
     },
 })
 
