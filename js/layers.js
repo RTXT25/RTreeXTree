@@ -93,7 +93,7 @@ addLayer("S", {
     gainMult() { 
         let mult = new Decimal (1)
         if (hasUpgrade('S', 11)) mult = mult.times(2)   // Returns your multiplier to your gain of the prestige resource.
-        return new Decimal(1)               // Factor in any bonuses multiplying gain here.
+        return mult               // Factor in any bonuses multiplying gain here.
     },
     gainExp() {                             // Returns the exponent to your gain of the prestige resource.
         return new Decimal(1)
@@ -104,7 +104,7 @@ addLayer("S", {
     upgrades: {
        11 :{
            title : "Handheld Radio",
-           description : "double your I gain",
+           description : "Passively gain 1 I per second",
        },
         // Look in the upgrades docs to see what goes here!
     },
