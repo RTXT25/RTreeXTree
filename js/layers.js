@@ -135,15 +135,17 @@ addLayer("E", {
     gainMult() {
         let mult = new Decimal(1)
         if (hasUpgrade('E', 13)) mult = mult.times(upgradeEffect('E', 13))
+        if (hasUpgrade("E", 14)) mult = mult.times(2)
         return mult
     },
 
     gainExp() { // Calculate the exponent on main currency from bonuses
         return new Decimal(1)
+        
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "E", description: "E: Reset for Equipment points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "e", description: "e: Reset for Equipment points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
     upgrades: {
@@ -174,8 +176,8 @@ addLayer("E", {
             
         },
         14: {
-            title: "broo",
-            description : "epic",
+            title: "2 Production lines",
+            description : "Double you EP gain",
             cost : new Decimal(10),
         },
     },
