@@ -135,7 +135,7 @@ addLayer("E", {
     gainMult() {
         let mult = new Decimal(1)
         if (hasUpgrade('E', 13)) mult = mult.times(upgradeEffect('E', 13))
-        if (hasUpgrade("E", 14)) mult = mult.times(2)
+        if (hasUpgrade("E", 21)) mult = mult.times(2)
         return mult
     },
 
@@ -176,9 +176,19 @@ addLayer("E", {
             
         },
         14: {
+            title: "Adaptive Factory Factory Factorys",
+            description : "Boost AFF by EP",
+            cost : new Decimal(20),
+        },
+        21: {
             title: "2 Production lines",
             description : "Double you EP gain",
             cost : new Decimal(10),
+        },
+        31:{
+            title: "Shipping",
+            description : "unlock a new layer (and bost WP by 10%)",
+            cost: new Decimal(1000),
         },
     },
 })
