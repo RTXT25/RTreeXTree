@@ -13,9 +13,6 @@ addLayer("c", {
     clickables: {
         11: {
             title: "The Chemistree 2",
-            display() {
-                return "Come back later; I'm busy right now."
-            },
             canClick() {return true},
             onClick() {
                 window.location.href = "https://RTXT25.github.io"
