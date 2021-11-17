@@ -18,7 +18,10 @@ addLayer("c", {
             },
             canClick() {return true},
             onClick() {
-                window.location.href = "https://raw.githack.com/microwaved-pizza/The-Modding-Tree/chem2/index.html"
+                window.location.href = "https://RTXT25.github.io"
+		    
+		   
+		  "
             }
         }
     },
