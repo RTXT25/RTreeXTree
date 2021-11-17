@@ -2,7 +2,6 @@
 
 <head>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/system-style.css" />
 	<link rel="stylesheet" type="text/css" href="css/bars.css" />
 	<link rel="stylesheet" type="text/css" href="css/components.css" />
@@ -44,25 +43,21 @@
 		<canvas id="treeCanvas" class="canvas" v-if="!(tmp.gameEnded && !player.keepGoing)"></canvas>
 
 		<div v-if="false" id="loadingSection" class="fullWidth">
-			<h1>Loading... (If this takes too long it means there was a serious error!)←</h1>
+			<h1>Loading... (If this takes too long it means there was a serious error! (How did i break a website))←</h1>
 		</div>
 		<div class="vl" v-if="player.navTab !== 'none' && tmp.other.splitScreen && player.tab!='none' && !(tmp.gameEnded && !player.keepGoing)"></div>
 		<div v-if="(tmp.gameEnded && !player.keepGoing)" class="fullWidth">
 			<br>
-			<h2>{{modInfo.name}} {{VERSION.withoutName}}</h2><br><br>
+			<h2><h1>RTXT25.Github.io</h1></h2><br><br>
 			<h3 v-html="modInfo.winText"></h3><br>
-			<h3>Please check the Discord to see if there are new content updates!</h3><br><br>
-			<div v-if="!player.timePlayedReset">It took you {{formatTime(player.timePlayed)}} to beat the game.</div>
+			<h2>Wass Popin Welcome To My Website. <br>Also This Is Better On PC</h2><br><br>
+			<div v-if="!player.timePlayedReset"> </div>
 			<br>
-			<button class="longUpg can" onclick="hardReset(true)">Play Again</button>&nbsp;&nbsp;&nbsp;&nbsp;<button
-				class="longUpg can" onclick="keepGoing()">Keep Going</button>
+			<button
+				class="longUpg can" onclick="keepGoing()"><h2>Enter The Site</h2></button>
 			<br><br><br>
 			<span v-if="modInfo.discordLink"><a class="link" v-bind:href="modInfo.discordLink"
-					target="_blank">{{modInfo.discordName}}</a><br></span>
-			<a class="link" href="https://discord.gg/F3xveHV" target="_blank"
-				v-bind:style="modInfo.discordLink ? {'font-size': '16px'} : {}">The Modding Tree Discord</a><br>
-			<a class="link" href="http://discord.gg/wwQfgPa" target="_blank" v-bind:style="{'font-size': '16px'}">Main
-				Prestige Tree server</a><br>
+					target="_blank">{{modInfo.discordName}}</a><br></span><br>
 			<br><br>
 		</div>
 
@@ -78,18 +73,12 @@
 			v-if="((player.navTab == 'none' && (tmp[player.tab].row == 'side' || tmp[player.tab].row == 'otherside' || player[player.tab].prevTab)) || player[player.navTab]?.prevTab)"				class="other-back overlayThing" onclick="goBack(player.navTab == 'none' ? player.tab : player.navTab)">←</button>
 			<img id="optionWheel" class="overlayThing" v-if="player.tab!='options-tab'" src="options_wheel.png"
 				onclick="showTab('options-tab')"></img>
-			<div id="info" v-if="player.tab!='info-tab'" class="overlayThing" onclick="showTab('info-tab')"><br>i</div>
 			<div id="discord" class="overlayThing">
-				<img onclick="window.open((modInfo.discordLink ? modInfo.discordLink : 'https://discord.gg/F3xveHV'),'mywindow')"
+				<img onclick="window.open((modInfo.discordLink ? modInfo.discordLink : ''),'mywindow')"
 					src="discord.png" target="_blank"></img>
 				<ul id="discord-links">
 					<li v-if="modInfo.discordLink"><a class="link" v-bind:href="modInfo.discordLink"
 							target="_blank">{{modInfo.discordName}}</a><br></li>
-					<li><a class="link" href="https://discord.gg/F3xveHV" target="_blank"
-							v-bind:style="modInfo.discordLink ? {'font-size': '16px'} : {}">The Modding Tree
-							Discord</a><br></li>
-					<li><a class="link" href="http://discord.gg/wwQfgPa" target="_blank"
-							v-bind:style="{'font-size': '16px'}">Main Prestige Tree server</a></li>
 				</ul>
 			</div>
 			<overlay-head v-if="!(tmp.gameEnded && !player.keepGoing)"></overlay-head>

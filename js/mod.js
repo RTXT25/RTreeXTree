@@ -1,29 +1,38 @@
 let modInfo = {
-	name: "RTXT25's Trees",
-	id: "whybutok",
+	name: "RTXT25.Github.io",
+	id: "RTXT25.Github.io",
 	author: "RTXT25",
-	pointsName: "there are no points",
+	pointsName: "points cuz funny",
 	modFiles: ["layers.js", "tree.js"],
 
-	discordName: "",
-	discordLink: "",
-	initialStartPoints: new Decimal(0), // Used for hard resets and new players
-	offlineLimit: 1,  // In hours
+	discordName: "i dont have Discord server",
+	discordLink: "lol",
+	initialStartPoints: new Decimal (69), // Used for hard resets and new players
+	offlineLimit: 0,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "meta",
+	num: "2.1",
+	name: "Website Revamped",
 }
 
-let changelog = `<h1>Changelog:</h1><br>
-	<h3>v0.0</h3><br>
-		- the tree exists now<br>
-		- added nothing lol<br>
-		`
+let changelog = `<h1>Changelog:</h1><br><br>
+		<h3>Website Revamped: Revamp Push 3 v2.2</h3><br>
+		- Added Even More Stuff.<br>
+		<br>
+		<h3>Website Revamped: Revamp Push 2 v2.1</h3><br>
+		- Added More Stuff.<br>
+		<br>
+	<h3>Website Revamped: Revamp Push 1 v2.0</h3><br>
+		- Made The Thing.<br>
+		<br>
+	<h3>Old Website v1.0</h3><br>
+		- The old one.<br>
+		<br>
+		Why Does A Website Need A Change Log`
 
-let winText = `youre done pog`
+let winText = ` `
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
 // (The ones here are examples, all official functions are already taken care of)
@@ -40,7 +49,9 @@ function canGenPoints(){
 
 // Calculate points/sec!
 function getPointGen() {
-	if (!canGenPoints()) {return new Decimal(0)}
+	if(!canGenPoints())
+		return new Decimal(0)
+
 	let gain = new Decimal(1)
 	return gain
 }
@@ -55,8 +66,9 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return false
+	return player.points.gte(new Decimal("0"))
 }
+
 
 
 // Less important things beyond this point!
@@ -68,18 +80,10 @@ var backgroundStyle = {
 
 // You can change this if you have things that can be messed up by long tick lengths
 function maxTickLength() {
-	return(1) // Default is 1 hour which is just arbitrarily large
+	return(3600) // Default is 1 hour which is just arbitrarily large
 }
 
 // Use this if you need to undo inflation from an older version. If the version is older than the version that fixed the issue,
 // you can cap their current resources with this.
 function fixOldSave(oldVersion){
-}
-
-function addAlignments() {
-	player.l.law = new Decimal(1)
-    player.l.chaos = new Decimal(1)
-    player.l.good = new Decimal(1)
-    player.l.evil = new Decimal(1)
-	player.l.unlocked = true
 }
