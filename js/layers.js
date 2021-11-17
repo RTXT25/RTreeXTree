@@ -57,7 +57,7 @@ addLayer("po", {
     },
     infoboxes: {
         Orion: {
-            title: "<h1>Orion Info</h1>",
+            title: "<h1>Project Orion</h1>",
             body() { return "None for now" },
         },
     },
