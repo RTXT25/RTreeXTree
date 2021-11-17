@@ -1,8 +1,8 @@
 let modInfo = {
-	name: "The Microwaved Tree",
-	id: "microwavepizza",
-	author: "micro",
-	pointsName: "points",
+	name: "RTXT25's Trees",
+	id: "whybutok",
+	author: "RTXT25",
+	pointsName: "there are no points",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -21,7 +21,7 @@ let changelog = `<h1>Changelog:</h1><br>
 	<h3>v0.0</h3><br>
 		- the tree exists now<br>
 		- added nothing lol<br>
-		- next up: no???<br>`
+		`
 
 let winText = `youre done pog`
 
