@@ -32,7 +32,7 @@ addLayer("po", {
 		points: new Decimal(0)
     }},
     color: "#6d00b0",
-    nodeStyle: { "width" : "400px", "height" : "400px"},
+    nodeStyle: { "width" : "200px", "height" : "200px"},
     row: 0,
     symbol: "O",
     position: 0,
