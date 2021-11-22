@@ -32,7 +32,7 @@ addLayer("po", {
 		points: new Decimal(0)
     }},
     color: "#6d00b0",
-    nodeStyle: { "width" : "100px", "height" : "100px"},
+    nodeStyle: { "width" : "150px", "height" : "150px"},
     row: 0,
     symbol: "<h1>O</h1>",
     position: 0,
@@ -62,11 +62,11 @@ addLayer("po", {
             body() { return "None for now" },
         },
 	OPlay: {
-            title: "<h1>Project Orion</h1>",
+            title: "<h3>Play Project Orion Here</h3>",
             body() { return "None for now" },
         },
 	OCode: {
-            title: "<h1>Project Orion</h1>",
+            title: "<h3>See Project Orion Code Here</h3>",
             body() { return "None for now" },
         },
     },
@@ -76,6 +76,60 @@ addLayer("po", {
         "blank",
         "blank",
         ["row", [["clickable", 11],["infobox","OPlay"]],],
-	["row", [["clickable", 12],["infobox","OCode"]],],
+	    ["row", [["clickable", 12],["infobox","OCode"]],],
+    ] 
+})
+addLayer("p1t", {
+    name: "Plus1Tree",
+    startData() {return {
+        unlocked: true,
+		points: new Decimal(0)
+    }},
+    color: "#4BDC13",
+    nodeStyle: { "width" : "150px", "height" : "150px"},
+    row: 0,
+    symbol: "<h1>+</h1>",
+    position: 1,
+    branches: ["p"],
+    tooltip: "Plus 1 Tree",
+    clickables: {
+        11: {
+            title: "Play",
+            canClick() {return true},
+            onClick() {
+                window.location.href = "https://rtxt25.github.io/Plus1Tree/"
+            },
+            tooltip: "Click Here To PLay The Game"
+        },
+        12: {
+            title: "Code",
+            canClick() {return true},
+            onClick() {
+                window.location.href = "https://github.com/RTXT25/Plus1Tree"
+            },
+            tooltip: "Click Here To See My Bad Code"
+        }
+    },
+    infoboxes: {
+        P1t: {
+            title: "<h1>Plus 1 Tree</h1>",
+            body() { return "None for now" },
+        },
+	    PPlay: {
+            title: "<h3>Play Plus 1 Tree Here</h3>",
+            body() { return "None for now" },
+        },
+	    PCode: {
+            title: "<h3>See Plus 1 Tree Code Here</h3>",
+            body() { return "None for now" },
+        },
+    },
+    tabFormat: [
+        "blank",
+        ["infobox", "P1t"],
+        "blank",
+        "blank",
+        ["row", [["clickable", 11],["infobox","PPlay"]],],
+	    ["row", [["clickable", 12],["infobox","PCode"]],],
     ] 
 })
