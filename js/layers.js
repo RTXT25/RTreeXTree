@@ -32,9 +32,9 @@ addLayer("po", {
 		points: new Decimal(0)
     }},
     color: "#6d00b0",
-    nodeStyle: { "width" : "200px", "height" : "200px"},
+    nodeStyle: { "width" : "100px", "height" : "100px"},
     row: 0,
-    symbol: "O",
+    symbol: "<h1>O</h1>",
     position: 0,
     branches: ["p"],
     tooltip: "Project Orion",
