@@ -60,12 +60,21 @@ addLayer("po", {
             title: "<h1>Project Orion</h1>",
             body() { return "None for now" },
         },
+	OPlay: {
+            title: "<h1>Project Orion</h1>",
+            body() { return "None for now" },
+        },
+	OCode: {
+            title: "<h1>Project Orion</h1>",
+            body() { return "None for now" },
+        },
     },
     tabFormat: [
         "blank",
         ["infobox", "Orion"],
         "blank",
         "blank",
-        ["row", [["clickable", 11],["clickable", 12]],],
+        ["row", [["clickable", 11],["infobox","OPlay"]],],
+	["row", [["clickable", 12],["infobox","OCode"]],],
     ] 
 })
