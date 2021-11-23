@@ -13,21 +13,24 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "2.1",
+	num: "2.2",
 	name: "Website Revamped",
 }
 
 let changelog = `<h1>Changelog:</h1><br><br>
+		<h3>Website Revamped v2.3</h3><br>
+		- New 404 Page.<br>
+		<br>
 		<h3>Website Revamped: Revamp Push 3 v2.2</h3><br>
 		- Added Even More Stuff.<br>
 		<br>
 		<h3>Website Revamped: Revamp Push 2 v2.1</h3><br>
 		- Added More Stuff.<br>
 		<br>
-	<h3>Website Revamped: Revamp Push 1 v2.0</h3><br>
+		<h3>Website Revamped: Revamp Push 1 v2.0</h3><br>
 		- Made The Thing.<br>
 		<br>
-	<h3>Old Website v1.0</h3><br>
+		<h3>Old Website v1.0</h3><br>
 		- The old one.<br>
 		<br>
 		Why Does A Website Need A Change Log`
