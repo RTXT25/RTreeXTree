@@ -25,8 +25,8 @@ addLayer("h", {
         ["clickable", 11]
     ]
 })
-addLayer("po", {
-    name: "Project Orion",
+addLayer("ptbf", {
+    name: "Prestige Tree But Faster",
     startData() {return {
         unlocked: true,
 		points: new Decimal(0)
@@ -37,13 +37,13 @@ addLayer("po", {
     symbol: "<h1>O</h1>",
     position: 0,
     branches: ["p"],
-    tooltip: "Project Orion",
+    tooltip: "The Prestige Tree Remasterd But Faster",
     clickables: {
         11: {
             title: "Play",
             canClick() {return true},
             onClick() {
-                window.location.href = "https://rtxt25.github.io/Project-Orion/"
+                window.location.href = "https://rtxt25.github.io/The-Prestige-Tree-But-Faster/"
             },
             tooltip: "Click Here To PLay The Game"
         },
