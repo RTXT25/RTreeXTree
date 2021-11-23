@@ -13,11 +13,14 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "2.3",
+	num: "2.3.1",
 	name: "Website Revamped",
 }
 
 let changelog = `<h1>Changelog:</h1><br><br>
+		<h3>Website Revamped v2.3.1</h3><br>
+		- Added the Word Error to 404.<br>
+		br>
 		<h3>Website Revamped v2.3</h3><br>
 		- New 404 Page.<br>
 		<br>
