@@ -1,5 +1,5 @@
-addLayer("h", {
-    name: "homepage",
+addLayer("menu", {
+    name: "menu",
     startData() {return {
         unlocked: true,
 		points: new Decimal(0)
@@ -9,7 +9,7 @@ addLayer("h", {
     symbol: "🏠",
     position: 0,
     branches: ["p"],
-    tooltip: "Go Back To The Home Page",
+    tooltip: "Open The Menu",
     clickables: {
         11: {
             title: "Go Home",
@@ -18,11 +18,27 @@ addLayer("h", {
                 window.location.href = "https://RTXT25.github.io"
             },
             tooltip: "Go To the Home Page"
-        }
+        },
+        12: {
+            title: "Go To Downloads",
+            canClick() {return true},
+            onClick() {
+                window.location.href = "https://RTXT25.github.io/Downloads"
+            },
+            tooltip: "Go To Downloads"
+        },
+    },
+    infoboxes:{
+        Main: {
+            title: "Menu",
+            body() { return "<h1>MENU</h1>" },
+        },
     },
     tabFormat: [
         "blank",
-        ["clickable", 11]
+        ["row", [["infobox", "Main"],],],
+        "blank",
+        ["row", [["clickable", 11],["clickable", 12],],],
     ]
 })
 addLayer("po", {
